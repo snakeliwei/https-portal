@@ -17,8 +17,7 @@ RUN apk --update add python ruby dcron tar tzdata && \
     rm -rf /var/cache/apk/* && \
     tar xzf /tmp/s6-overlay-amd64.tar.gz -C / &&\
     tar -C /bin -xzf /tmp/docker-gen-alpine-linux-amd64-$DOCKER_GEN_VERSION.tar.gz && \
-    rm /tmp/docker-gen-linux-amd64-$DOCKER_GEN_VERSION.tar.gz && \
-    rm /tmp/s6-overlay-amd64.tar.gz && \
+    rm /tmp/* && \
     rm /etc/nginx/conf.d/default.conf
 
 COPY ./fs_overlay /
