@@ -1,4 +1,4 @@
-FROM nginx:alpine
+FROM alpine
 
 MAINTAINER Lyndon "snakeliwei@gmail.com"
 
@@ -11,7 +11,7 @@ ADD https://github.com/just-containers/s6-overlay/releases/download/$S6_OVERLAY_
 ADD https://github.com/jwilder/docker-gen/releases/download/$DOCKER_GEN_VERSION/docker-gen-alpine-linux-amd64-$DOCKER_GEN_VERSION.tar.gz /tmp/
 ADD https://raw.githubusercontent.com/diafygi/acme-tiny/fcb7cd6f66e951eeae76ff2f48d8ad3e40da37ef/acme_tiny.py /bin/acme_tiny
 
-RUN apk --update add python ruby dcron tar tzdata && \
+RUN apk --update add nginx python ruby dcron tar tzdata && \
     cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     apk del tzdata && \
     rm -rf /var/cache/apk/* && \
