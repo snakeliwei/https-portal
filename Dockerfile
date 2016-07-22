@@ -1,4 +1,4 @@
-FROM alpine
+FROM nginx:alpine
 
 MAINTAINER Lyndon "snakeliwei@gmail.com"
 
