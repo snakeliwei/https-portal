@@ -1,4 +1,4 @@
-FROM snakeliwei/nginx-alpn
+FROM nginx
 
 MAINTAINER Lyndon "snakeliwei@gmail.com"
 
