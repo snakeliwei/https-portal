@@ -1,5 +1,4 @@
 FROM snakeliwei/nginx-alpn
-
 MAINTAINER Lyndon "snakeliwei@gmail.com"
 
 WORKDIR /root
